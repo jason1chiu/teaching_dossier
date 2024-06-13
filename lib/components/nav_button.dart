@@ -10,6 +10,11 @@ class NavButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
+      style: TextButton.styleFrom(
+        foregroundColor: Colors.deepPurple, // text color
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        textStyle: const TextStyle(fontSize: 18),
+      ),
       child: Text(label),
     );
   }
