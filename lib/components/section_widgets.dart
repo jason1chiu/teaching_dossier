@@ -17,7 +17,7 @@ Widget buildSectionTitle(String title, GlobalKey key) {
 Widget buildParagraph(String text) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 16.0),
-    child: Text(text, style: const TextStyle(fontSize: 16)),
+    child: Text(text, style: const TextStyle(fontSize: 26)),
   );
 }
 

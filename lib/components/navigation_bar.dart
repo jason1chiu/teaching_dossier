@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import 'nav_button.dart';
 
 class CustomNavigationBar extends StatelessWidget {
@@ -83,23 +82,26 @@ class CustomNavigationBar extends StatelessWidget {
                   itemBuilder: (BuildContext context) {
                     return {
                       'About Me',
-                      'Education',
                       'Teaching Philosophy',
+                      'Education',
                       'Professional Experience',
                       'Skills and Interests',
                       'Contact'
                     }.map((String choice) {
                       return PopupMenuItem<String>(
                         value: choice,
-                        child: Text(choice),
+                        child: Text(
+                          choice,
+                          style: const TextStyle(fontSize: 22, color: Colors.deepPurple),
+                        ),
                       );
                     }).toList();
                   },
                   child: const Text(
                     'Welcome',
                     style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.black,
+                      fontSize: 26,
+                      color: Colors.deepPurple,
                     ),
                   ),
                 ),
