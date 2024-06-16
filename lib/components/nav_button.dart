@@ -13,7 +13,7 @@ class NavButton extends StatelessWidget {
       style: TextButton.styleFrom(
         foregroundColor: Colors.deepPurple, // text color
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        textStyle: const TextStyle(fontSize: 18),
+        textStyle: const TextStyle(fontSize: 26),
       ),
       child: Text(label),
     );

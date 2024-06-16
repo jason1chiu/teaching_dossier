@@ -19,18 +19,18 @@ class HeroSection extends StatelessWidget {
         child: const Column(
           children: [
             CircleAvatar(
-              radius: 50,
+              radius: 100,
               backgroundImage: AssetImage(
                   'assets/images/your_photo.jpg'), // Replace with your photo
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 20),
             Text(
               'Welcome to My Teaching Dossier',
-              style: TextStyle(fontSize: 24, color: Colors.white),
+              style: TextStyle(fontSize: 48, color: Colors.white70),
             ),
             Text(
               'Jason Chiu',
-              style: TextStyle(fontSize: 18, color: Colors.white70),
+              style: TextStyle(fontSize: 36, color: Colors.white70),
             ),
           ],
         ),

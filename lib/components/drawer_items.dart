@@ -49,61 +49,85 @@ class CustomDrawer extends StatelessWidget {
               'Menu',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 24,
+                fontSize: 22,
               ),
             ),
           ),
           ListTile(
-            title: const Text('Welcome'),
+            title: const Text(
+              'Welcome',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               scrollToSection(welcomeKey);
             },
           ),
           ListTile(
-            title: const Text('About Me'),
+            title: const Text(
+              'About Me',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               scrollToSection(aboutMeKey);
             },
           ),
           ListTile(
-            title: const Text('Education'),
+            title: const Text(
+              'Education',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               scrollToSection(educationKey);
             },
           ),
           ListTile(
-            title: const Text('Professional Experience'),
+            title: const Text(
+              'Professional Experience',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               scrollToSection(experienceKey);
             },
           ),
           ListTile(
-            title: const Text('Skills and Interests'),
+            title: const Text(
+              'Skills and Interests',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               scrollToSection(skillsKey);
             },
           ),
           ListTile(
-            title: const Text('Personal Philosophy'),
+            title: const Text(
+              'Personal Philosophy',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               scrollToSection(philosophyKey);
             },
           ),
           ListTile(
-            title: const Text('Contact'),
+            title: const Text(
+              'Contact',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               scrollToSection(contactKey);
             },
           ),
           ListTile(
-            title: const Text('Professional Learning Plan'),
+            title: const Text(
+              'Professional Learning Plan',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               _launchURL(
@@ -111,7 +135,10 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Statement of Beliefs'),
+            title: const Text(
+              'Statement of Beliefs',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               _launchURL(
@@ -119,7 +146,10 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Résumé'),
+            title: const Text(
+              'Résumé',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               _launchURL(
@@ -127,7 +157,10 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Cover Letter'),
+            title: const Text(
+              'Cover Letter',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               _launchURL(
@@ -135,14 +168,20 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Teaching Appraisals'),
+            title: const Text(
+              'Teaching Appraisals',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               scrollToSection(appraisalsKey);
             },
           ),
           ListTile(
-            title: const Text('Teaching Evidence'),
+            title: const Text(
+              'Teaching Evidence',
+              style: TextStyle(fontSize: 22),
+            ),
             onTap: () {
               Navigator.pop(context);
               scrollToSection(evidenceKey);
