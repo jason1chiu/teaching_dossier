@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'components/navigation_bar.dart';
 import 'components/drawer_items.dart';
 import 'sections/about_me.dart';
@@ -20,11 +19,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
         textTheme: const TextTheme(
-          headline1: TextStyle(
+          displayLarge: TextStyle(
               fontFamily: 'Lato', fontWeight: FontWeight.bold, fontSize: 32),
-          headline6: TextStyle(
+          titleLarge: TextStyle(
               fontFamily: 'Lato', fontWeight: FontWeight.bold, fontSize: 20),
-          bodyText2: TextStyle(fontFamily: 'Lato', fontSize: 16),
+          bodyMedium: TextStyle(fontFamily: 'Lato', fontSize: 16),
         ),
       ),
       home: const MyHomePage(title: 'Teaching Dossier'),
@@ -63,19 +62,11 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title, style: Theme.of(context).textTheme.headline6),
+        title: Text(widget.title, style: Theme.of(context).textTheme.titleLarge),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         automaticallyImplyLeading: false,
         bottom: PreferredSize(

@@ -26,10 +26,11 @@ class AboutMeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final GlobalKey sectionTitleKey = GlobalKey();
     return Column(
       key: aboutMeKey,
       children: [
-        buildSectionTitle('About Me', aboutMeKey),
+        buildSectionTitle('About Me', sectionTitleKey),
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: LayoutBuilder(
@@ -65,7 +66,8 @@ class AboutMeSection extends StatelessWidget {
                       ? Row(
                           children: [
                             Expanded(
-                              child: PhilosophySection(sectionKey: philosophyKey),
+                              child:
+                                  PhilosophySection(sectionKey: philosophyKey),
                             ),
                             const SizedBox(width: 16),
                             Expanded(
@@ -85,7 +87,8 @@ class AboutMeSection extends StatelessWidget {
                       ? Row(
                           children: [
                             Expanded(
-                              child: ExperienceSection(sectionKey: experienceKey),
+                              child:
+                                  ExperienceSection(sectionKey: experienceKey),
                             ),
                             const SizedBox(width: 16),
                             Expanded(

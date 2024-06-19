@@ -28,10 +28,6 @@ class HeroSection extends StatelessWidget {
               'Welcome to My Teaching Dossier',
               style: TextStyle(fontSize: 48, color: Colors.white70),
             ),
-            Text(
-              'Jason Chiu',
-              style: TextStyle(fontSize: 36, color: Colors.white70),
-            ),
           ],
         ),
       ),

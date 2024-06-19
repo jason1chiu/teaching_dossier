@@ -104,10 +104,12 @@ class ContactSection extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: InkWell(
-                        onTap: () => _launchURL('https://www.linkedin.com/in/chien-cheng-chiu-6a00b4281/'),
+                        onTap: () => _launchURL(
+                            'https://www.linkedin.com/in/chien-cheng-chiu-6a00b4281/'),
                         child: const Row(
                           children: [
-                            FaIcon(FontAwesomeIcons.linkedin, color: Colors.deepPurple),
+                            FaIcon(FontAwesomeIcons.linkedin,
+                                color: Colors.deepPurple),
                             SizedBox(width: 8),
                             Expanded(
                               child: Text(
@@ -129,9 +131,10 @@ class ContactSection extends StatelessWidget {
     );
   }
 
-  void _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+  void _launchURL(String urlString) async {
+    final Uri url = Uri.parse(urlString);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
     } else {
       throw 'Could not launch $url';
     }
