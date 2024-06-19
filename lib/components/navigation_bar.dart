@@ -36,9 +36,10 @@ class CustomNavigationBar extends StatelessWidget {
     required this.evidenceKey,
   });
 
-  void _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+  void _launchURL(String urlString) async {
+    final Uri url = Uri.parse(urlString);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
     } else {
       throw 'Could not launch $url';
     }
@@ -92,7 +93,8 @@ class CustomNavigationBar extends StatelessWidget {
                         value: choice,
                         child: Text(
                           choice,
-                          style: const TextStyle(fontSize: 22, color: Colors.deepPurple),
+                          style: const TextStyle(
+                              fontSize: 22, color: Colors.deepPurple),
                         ),
                       );
                     }).toList();

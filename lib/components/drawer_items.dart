@@ -75,6 +75,16 @@ class CustomDrawer extends StatelessWidget {
           ),
           ListTile(
             title: const Text(
+              'Teaching Philosophy',
+              style: TextStyle(fontSize: 22),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+              scrollToSection(philosophyKey);
+            },
+          ),
+          ListTile(
+            title: const Text(
               'Education',
               style: TextStyle(fontSize: 22),
             ),
@@ -101,16 +111,6 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
               scrollToSection(skillsKey);
-            },
-          ),
-          ListTile(
-            title: const Text(
-              'Personal Philosophy',
-              style: TextStyle(fontSize: 22),
-            ),
-            onTap: () {
-              Navigator.pop(context);
-              scrollToSection(philosophyKey);
             },
           ),
           ListTile(
@@ -192,9 +192,10 @@ class CustomDrawer extends StatelessWidget {
     );
   }
 
-  void _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+  void _launchURL(String urlString) async {
+    final Uri url = Uri.parse(urlString);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
     } else {
       throw 'Could not launch $url';
     }
