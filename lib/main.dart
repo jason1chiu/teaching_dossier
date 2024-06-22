@@ -3,6 +3,7 @@ import 'components/navigation_bar.dart';
 import 'components/drawer_items.dart';
 import 'sections/about_me.dart';
 import 'widgets/hero_section.dart';
+import 'pages/pdf_viewer_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,6 +28,16 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const MyHomePage(title: 'Teaching Dossier'),
+      routes: {
+        '/pdfViewerPLP': (context) =>
+            const PDFViewerPage(path: 'assets/pdfs/professional_learning_plan.pdf'),
+        '/pdfViewerBeliefs': (context) =>
+            const PDFViewerPage(path: 'assets/pdfs/statement_of_beliefs.pdf'),
+        '/pdfViewerResume': (context) =>
+            const PDFViewerPage(path: 'assets/pdfs/resume.pdf'),
+        '/pdfViewerCoverLetter': (context) =>
+            const PDFViewerPage(path: 'assets/pdfs/cover_letter.pdf'),
+      },
     );
   }
 }
@@ -66,7 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title, style: Theme.of(context).textTheme.titleLarge),
+        title:
+            Text(widget.title, style: Theme.of(context).textTheme.titleLarge),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         automaticallyImplyLeading: false,
         bottom: PreferredSize(
@@ -117,7 +129,6 @@ class _MyHomePageState extends State<MyHomePage> {
               philosophyKey: _philosophyKey,
               contactKey: _contactKey,
             ),
-            // Add other sections with their respective keys if needed
           ],
         ),
       ),

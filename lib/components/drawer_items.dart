@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CustomDrawer extends StatelessWidget {
   final Function(GlobalKey) scrollToSection;
@@ -130,8 +129,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pop(context);
-              _launchURL(
-                  'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/professional-learning-plan-1.pdf');
+              Navigator.pushNamed(context, '/pdfViewerPLP');
             },
           ),
           ListTile(
@@ -141,8 +139,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pop(context);
-              _launchURL(
-                  'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/statement-of-beliefs.pdf');
+              Navigator.pushNamed(context, '/pdfViewerBeliefs');
             },
           ),
           ListTile(
@@ -152,8 +149,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pop(context);
-              _launchURL(
-                  'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/jason-chiu-teachers-resume.pdf');
+              Navigator.pushNamed(context, '/pdfViewerResume');
             },
           ),
           ListTile(
@@ -163,8 +159,7 @@ class CustomDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pop(context);
-              _launchURL(
-                  'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/jasons-teacher-cover-letter-for-grade-9-12.pdf');
+              Navigator.pushNamed(context, '/pdfViewerCoverLetter');
             },
           ),
           ListTile(
@@ -190,14 +185,5 @@ class CustomDrawer extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  void _launchURL(String urlString) async {
-    final Uri url = Uri.parse(urlString);
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url);
-    } else {
-      throw 'Could not launch $url';
-    }
   }
 }

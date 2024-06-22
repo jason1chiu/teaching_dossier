@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'nav_button.dart';
 
 class CustomNavigationBar extends StatelessWidget {
@@ -35,15 +34,6 @@ class CustomNavigationBar extends StatelessWidget {
     required this.appraisalsKey,
     required this.evidenceKey,
   });
-
-  void _launchURL(String urlString) async {
-    final Uri url = Uri.parse(urlString);
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -109,20 +99,20 @@ class CustomNavigationBar extends StatelessWidget {
                 ),
                 NavButton(
                     label: 'Professional Learning Plan',
-                    onPressed: () => _launchURL(
-                        'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/professional-learning-plan-1.pdf')),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, '/pdfViewerPLP')),
                 NavButton(
                     label: 'Statement of Beliefs',
-                    onPressed: () => _launchURL(
-                        'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/statement-of-beliefs.pdf')),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, '/pdfViewerBeliefs')),
                 NavButton(
                     label: 'Résumé',
-                    onPressed: () => _launchURL(
-                        'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/jason-chiu-teachers-resume.pdf')),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, '/pdfViewerResume')),
                 NavButton(
                     label: 'Cover Letter',
-                    onPressed: () => _launchURL(
-                        'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/jasons-teacher-cover-letter-for-grade-9-12.pdf')),
+                    onPressed: () =>
+                        Navigator.pushNamed(context, '/pdfViewerCoverLetter')),
                 NavButton(
                     label: 'Teaching Appraisals',
                     onPressed: () => scrollToSection(appraisalsKey)),

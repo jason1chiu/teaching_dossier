@@ -1,11 +1,11 @@
 name: teaching_dossier
 description: "A new Flutter project."
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.4 <4.0.0'
+  sdk: ">=3.3.4 <4.0.0"
 
 dependencies:
   flutter:
@@ -13,6 +13,7 @@ dependencies:
   url_launcher: ^6.0.17
   font_awesome_flutter: ^10.1.0
   cupertino_icons: ^1.0.6
+  syncfusion_flutter_pdfviewer: ^26.1.38
 
 dev_dependencies:
   flutter_test:
@@ -25,6 +26,10 @@ flutter:
   assets:
     - assets/images/your_photo.jpg
     - assets/images/classroom.jpg
+    - assets/pdfs/professional_learning_plan.pdf
+    - assets/pdfs/statement_of_beliefs.pdf
+    - assets/pdfs/resume.pdf
+    - assets/pdfs/cover_letter.pdf
 
   fonts:
     - family: Lato
