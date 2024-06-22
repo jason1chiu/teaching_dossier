@@ -110,19 +110,19 @@ class CustomNavigationBar extends StatelessWidget {
                 NavButton(
                     label: 'Professional Learning Plan',
                     onPressed: () => _launchURL(
-                        'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/professional-learning-plan-1.pdf')),
+                        'https://drive.google.com/file/d/1pahvCmBmCZMkmRz4A3-mTGXTHedSVnEv/view')),
                 NavButton(
                     label: 'Statement of Beliefs',
                     onPressed: () => _launchURL(
-                        'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/statement-of-beliefs.pdf')),
+                        'https://drive.google.com/file/d/1Q_6jIBtktA_YDA--H0XzJc5dTBYafBOk/view')),
                 NavButton(
                     label: 'Résumé',
                     onPressed: () => _launchURL(
-                        'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/jason-chiu-teachers-resume.pdf')),
+                        'https://drive.google.com/file/d/1Yex1Yh9tKNMTddbCugWwatdRwnti4YOW/view')),
                 NavButton(
                     label: 'Cover Letter',
                     onPressed: () => _launchURL(
-                        'https://teachingdossier6.wordpress.com/wp-content/uploads/2024/04/jasons-teacher-cover-letter-for-grade-9-12.pdf')),
+                        'https://drive.google.com/file/d/1oH3gq9F0uI2QNmioFvDIZIklk8oqX1do/view')),
                 NavButton(
                     label: 'Teaching Appraisals',
                     onPressed: () => scrollToSection(appraisalsKey)),
