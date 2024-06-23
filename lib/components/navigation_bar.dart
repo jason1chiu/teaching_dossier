@@ -125,7 +125,8 @@ class CustomNavigationBar extends StatelessWidget {
                         'https://drive.google.com/file/d/1oH3gq9F0uI2QNmioFvDIZIklk8oqX1do/view')),
                 NavButton(
                     label: 'Teaching Appraisals',
-                    onPressed: () => scrollToSection(appraisalsKey)),
+                    onPressed: () => _launchURL(
+                        'https://drive.google.com/drive/folders/1QmzJXBrRYDBduB2ENTASoNb6MoeotYQu?usp=share_link')),
                 NavButton(
                     label: 'Teaching Evidence',
                     onPressed: () => scrollToSection(evidenceKey)),
@@ -133,7 +134,6 @@ class CustomNavigationBar extends StatelessWidget {
             ),
           );
         } else {
-          // Display drawer for smaller screens
           return AppBar(
             title: const Text('Jason\'s Teaching Dossier'),
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
